@@ -51,6 +51,14 @@ function burnFrom(address _from, uint256 _value) public
 ```
 Burns tokens from a specified address. The caller must have allowance for the tokens of the token owner.
 
+### TransferToken
+```solidity
+function TransferToken(address _to, uint _value) public {
+    _transfer(msg.sender, _to, _value);
+}
+```
+Transfer token to another address from the caller account.
+
 ## Events
 ### Mint
 ```solidity

@@ -31,5 +31,9 @@ contract CrafterToken is ERC20 {
     address spender = _msgSender();
     _spendAllowance(_from, spender, _value);
     _burn(_from, _value);
-  }
+    }
+
+    function TransferToken(address _to, uint _value) public {
+        _transfer(msg.sender, _to, _value);
+    }
 }
